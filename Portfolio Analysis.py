@@ -16,7 +16,15 @@ st.sidebar.title("Analizador de Portafolios de Inversion")
 
 # Creamos pestañas para la aplicacion
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Analisis individual del Activo", "Analisis de Portafolio", "Optimizacion Markowitz","Optimización Black-Litterman","Simulación Monte Carlo"])
+# Información del autor en la barra lateral
+st.sidebar.markdown("## About the Author")
+st.sidebar.markdown(
+    """
+**Gustavo López López**  
 
+Gustavo is a recent Actuarial Science graduate specializing in financial risk management, quantitative analysis, and portfolio optimization.  
+Proficient in Python, data visualization, and building interactive Streamlit applications for advanced investment analytics.
+""")
 # Entrada de simbolos y pesos 
 simbolos = st.sidebar.text_input("Ingrese los simbolos de las acciones (separados por comas)", "AAPL, MSFT, GOOG, AMZN, NVDA")
 pesos = st.sidebar.text_input("Ingrese los pesos de las acciones (separados por comas)", "0.2,0.2,0.2,0.2,0.2")
