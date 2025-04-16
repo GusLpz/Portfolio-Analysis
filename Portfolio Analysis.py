@@ -164,8 +164,6 @@ else:
         col4.metric("Sharpe Ratio", f"{sharpe:.2f}")
         col5.metric("Sortino Ratio", f"{sortino:.2f}")
         col6.metric("Max Drawdown (%)", f"{max_drawdown * 100:.2f}%")
-        
-
 
 
         col7, col8, colbeta = st.columns(3)
@@ -205,7 +203,7 @@ else:
 
 
 
-        # === Histogramas por separado
+        # === Histogramas 
         st.subheader(f"Distribución de Retornos: {selected_asset} vs {selected_benchmark}")
         col_hist1, col_hist2 = st.columns(2)
 
@@ -244,10 +242,10 @@ else:
         cvar_95_portfolio = Calcular_CVaR(portfolio_returns, var_95_portfolio)
         max_dd_portfolio = (portfolio_cumreturns.cummax() - portfolio_cumreturns).max() * 100
 
-        # NUEVO: Cálculo del beta del portafolio
+        # Cálculo del beta del portafolio
         beta_portfolio = np.cov(portfolio_returns, benchmark_returns)[0][1] / np.var(benchmark_returns)
 
-        # Mostramos las métricas utilizando columnas (se agregan 6 columnas para incluir el beta)
+        # Mostramos las métricas utilizando columnas 
         colp1, colp2, colp3 = st.columns(3)
         colp1.metric("Rendimiento Total", f"{total_return_portfolio:.2f}%")
         colp2.metric("Sharpe Ratio", f"{sharpe_portfolio:.2f}")
