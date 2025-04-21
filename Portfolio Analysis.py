@@ -15,7 +15,7 @@ st.set_page_config(page_title="Portfolio Analysis", page_icon="📈", layout="wi
 st.sidebar.title("Analizador de Portafolios de Inversion")
 
 # Creamos pestañas para la aplicacion
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Analisis individual del Activo", "Analisis de Portafolio", "Optimizacion Markowitz","Optimización Black-Litterman","Simulación Monte Carlo"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Analisis individual del Activo", "Analisis de Portafolio", "Optimizacion Markowitz","Optimización Black-Litterman","Extra - Opciones Simulación Monte Carlo"])
 
 # Entrada de simbolos y pesos 
 simbolos = st.sidebar.text_input("Ingrese los simbolos de las acciones (separados por comas)", "AAPL, MSFT, GOOG, AMZN, NVDA")
