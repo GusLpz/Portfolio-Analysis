@@ -29,8 +29,7 @@ benchmark_options = {
     "S&P 500": "^GSPC",
     "Nasdaq": "^IXIC",
     "Dow Jones": "^DJI",
-    "Russell 2000": "^RUT",
-    "ACWI": "ACWI"
+    "Russell 2000": "^RUT"
 }
 
 selected_benchmark = st.sidebar.selectbox("Seleccione un benchmark", list(benchmark_options.keys()))
