@@ -35,7 +35,7 @@ benchmark_options = {
 selected_benchmark = st.sidebar.selectbox("Seleccione un benchmark", list(benchmark_options.keys()))
 
 #Periodo de tiempo
-end_date = datetime.today().date()-1
+end_date = datetime.today().date()
 start_date_options = { 
 
     "1 mes": end_date - timedelta(days=30),
